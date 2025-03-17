@@ -24,3 +24,12 @@ export const sessions = sqliteTable('sessions', {
   token: text('token').notNull(),
   createdAt: integer('created_at', { mode: 'timestamp' }).default(sql`CURRENT_TIMESTAMP`),
 })
+
+// Schema-specific types
+
+// need to sync this up to post types in Sanity?
+export interface Post {
+  'title': string,
+  'author': string,
+  'Post': string
+}
